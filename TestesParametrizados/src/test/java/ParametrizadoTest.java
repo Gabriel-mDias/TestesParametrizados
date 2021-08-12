@@ -1,16 +1,21 @@
-import br.testesparametrizados.modals.Fibonacci;
+
 import br.testesparametrizados.utils.StringUtils;
 import java.util.Arrays;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EmptySource;
-import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 
 /*
@@ -26,37 +31,56 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class ParametrizadoTest {
 
-    @Parameterized.Parameters
+    @Parameters
     public static Iterable<Object[]> data() {
         return Arrays.asList(new Object[][] { 
-                 { "level" }, { "madam" }, { "tenet"},
+                 { "level", true }, { "madam", true }, { "tenet", true},
            });
     }
     
     String entrada;
+    boolean resultadoEsperado;
     
-    public ParametrizadoTest(String entrada) {
+    public ParametrizadoTest(String entrada, boolean resultadoEsperado) {
         this.entrada = entrada;
+        this.resultadoEsperado = resultadoEsperado;
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+    }
+
+    @Before
+    public void setUp() {
+
+    }
+
+    @After
+    public void tearDown() {
     }
     
     @Test
     public void test() {
-        assertTrue(StringUtils.isPalindrome(entrada));
+        Assert.assertEquals(StringUtils.isPalindrome(entrada), resultadoEsperado);
     }
 
-    @ParameterizedTest
-    @MethodSource("br.testesparametrizados.StringsProvider#palindromes")
+    @ParameterizedTest(name = "{index} => palindromo=''{0}''")
+    @ValueSource(strings = { "level", "madam", "saippuakivikauppias" })
     void externalPalindromeMethodSource(String string) {
         assertTrue(StringUtils.isPalindrome(string));
     }
     
-    @ParameterizedTest
+    @ParameterizedTest(name = "{index} => ''{0}'' é divisível por 3")
     @ValueSource(ints = { 3, 6, 15})
     void divisibleByThree(int number) {
         assertEquals(0, number % 3);
     }
     
-    @ParameterizedTest
+    @ParameterizedTest(name = "{index} => ''{0}'' é nula ou vazia")
     @NullSource
     @EmptySource
     @ValueSource(strings = { " " })

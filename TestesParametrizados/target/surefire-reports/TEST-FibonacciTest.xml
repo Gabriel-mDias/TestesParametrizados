@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="11" failures="0" name="FibonacciTest" time="3.74" errors="0" skipped="0">
+<testsuite tests="11" failures="0" name="FibonacciTest" time="3.66" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.9+7-LTS"/>
@@ -13,7 +13,6 @@
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="test" value="FibonacciTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/gabriel/Documentos/UFES/Gestão de Qualidade/Exercícios/TestesParametrizados/TestesParametrizados"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
@@ -45,7 +44,7 @@
     <property name="java.class.path" value="/home/gabriel/netbeans-12.0/netbeans/java/maven/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=FibonacciTest -Dmaven.ext.class.path=/home/gabriel/netbeans-12.0/netbeans/java/maven-nblib/netbeans-eventspy.jar surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/home/gabriel/netbeans-12.0/netbeans/java/maven-nblib/netbeans-eventspy.jar install"/>
     <property name="java.home" value="/usr/lib/jvm/jdk-11.0.9"/>
     <property name="user.language" value="pt"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -64,15 +63,15 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="FibonacciTest" name="test[0: fib(0)=0]" time="0.006"/>
+  <testcase classname="FibonacciTest" name="test[0: fib(0)=0]" time="0.007"/>
   <testcase classname="FibonacciTest" name="test[1: fib(1)=1]" time="0"/>
   <testcase classname="FibonacciTest" name="test[2: fib(2)=1]" time="0"/>
   <testcase classname="FibonacciTest" name="test[3: fib(3)=2]" time="0"/>
   <testcase classname="FibonacciTest" name="test[4: fib(4)=3]" time="0"/>
   <testcase classname="FibonacciTest" name="test[5: fib(5)=5]" time="0"/>
-  <testcase classname="FibonacciTest" name="test[6: fib(38)=39.088.169]" time="0.247"/>
-  <testcase classname="FibonacciTest" name="test[7: fib(39)=63.245.986]" time="0.365"/>
-  <testcase classname="FibonacciTest" name="test[8: fib(40)=102.334.155]" time="0.599"/>
-  <testcase classname="FibonacciTest" name="test[9: fib(41)=165.580.141]" time="0.952"/>
-  <testcase classname="FibonacciTest" name="test[10: fib(42)=267.914.296]" time="1.571"/>
+  <testcase classname="FibonacciTest" name="test[6: fib(38)=39.088.169]" time="0.229"/>
+  <testcase classname="FibonacciTest" name="test[7: fib(39)=63.245.986]" time="0.362"/>
+  <testcase classname="FibonacciTest" name="test[8: fib(40)=102.334.155]" time="0.585"/>
+  <testcase classname="FibonacciTest" name="test[9: fib(41)=165.580.141]" time="0.946"/>
+  <testcase classname="FibonacciTest" name="test[10: fib(42)=267.914.296]" time="1.531"/>
 </testsuite>

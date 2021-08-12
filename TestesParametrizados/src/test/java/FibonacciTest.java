@@ -1,6 +1,10 @@
 import br.testesparametrizados.modals.Fibonacci;
 import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import org.junit.runner.RunWith;
@@ -30,6 +34,23 @@ public class FibonacciTest {
     public FibonacciTest(int input, int expected) {
         this.input = input;
         this.expected = expected;
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+    }
+
+    @Before
+    public void setUp() {
+
+    }
+
+    @After
+    public void tearDown() {
     }
 
     @Test
